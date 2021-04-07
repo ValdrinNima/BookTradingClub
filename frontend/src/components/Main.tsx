@@ -1,12 +1,12 @@
 import React from "react";
+import styled from "styled-components";
 
-interface Props {
-	text?: string;
-}
+interface Props {}
 
+const MainContent = styled.main``;
 
-const Main: React.FC<Props> = () => {
-	return <div></div>
-}
+const Main: React.FC<Props> = ({ children }) => {
+	return <MainContent>{children}</MainContent>;
+};
 
-export default Main
+export default Main;
