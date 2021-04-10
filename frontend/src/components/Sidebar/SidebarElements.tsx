@@ -16,6 +16,7 @@ export const SidebarContainer = styled.aside<aside>`
 	left: 0;
 	transition: 0.3s ease-in-out;
 	opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+	/* slides from the top */
 	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 
