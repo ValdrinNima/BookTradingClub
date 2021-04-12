@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
 	background-color: black;
-	height: 80px;
+	height: 60px;
 	margin-top: -80px;
 	display: flex;
 	justify-content: center;
@@ -46,7 +46,7 @@ export const MobileIcon = styled.div`
 	@media screen and (max-width: 768px) {
 		display: block;
 		position: absolute;
-		top: 0;
+		top: -5px;
 		right: 0;
 		transform: translate(-100%, 60%);
 		font-size: 1.8rem;

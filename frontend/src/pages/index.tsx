@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BooksSection from "../components/BooksSection";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
@@ -16,6 +17,7 @@ const Home: React.FC<Props> = () => {
 		<>
 			<Sidebar isOpen={isOpen} toggle={toggle} />
 			<Navbar toggle={toggle} />
+			<BooksSection />
 			<Footer />
 		</>
 	);

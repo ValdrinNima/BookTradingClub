@@ -25,7 +25,6 @@ const Footer: React.FC<Props> = () => {
 				<FooterLinksContainer>
 					<FooterLinksWrapper>
 						<FooterLinkItems>
-							<FooterLinkTitle>About us</FooterLinkTitle>
 							<FooterLink to="/signin">About us</FooterLink>
 							<FooterLink to="/signin">How it works</FooterLink>
 							<FooterLink to="/signin">Created by</FooterLink>
@@ -34,7 +33,7 @@ const Footer: React.FC<Props> = () => {
 							</FooterLink>
 						</FooterLinkItems>
 					</FooterLinksWrapper>
-					<FooterLinksWrapper>
+					{/* <FooterLinksWrapper>
 						<FooterLinkItems>
 							<FooterLinkTitle>About us</FooterLinkTitle>
 							<FooterLink to="/signin">About us</FooterLink>
@@ -44,7 +43,7 @@ const Footer: React.FC<Props> = () => {
 								Terms of Service
 							</FooterLink>
 						</FooterLinkItems>
-					</FooterLinksWrapper>
+					</FooterLinksWrapper> */}
 				</FooterLinksContainer>
 				<SocialMedia>
 					<SocialMediaWrap>
