@@ -17,13 +17,13 @@ const BookItem: React.FC<Props> = () => {
 	return (
 		<BookItemContainer>
 			<BookItemWrap>
-				<BookOverview />
 				<BookItemImage src={image} />
 				<BookItemInfo>
 					<BookItemTitle />
 					<BookItemAuthor />
 					<BookItemDescription />
 				</BookItemInfo>
+				<BookOverview />
 			</BookItemWrap>
 		</BookItemContainer>
 	);

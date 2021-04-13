@@ -23,17 +23,17 @@ const Sidebar: React.FC<Props> = ({ isOpen, toggle }) => {
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="/about" onClick={toggle}>
-						About
+					<SidebarLink to="/trading" onClick={toggle}>
+						Trading
 					</SidebarLink>
-					<SidebarLink to="/about" onClick={toggle}>
-						About
+					<SidebarLink to="/requests" onClick={toggle}>
+						Requests
 					</SidebarLink>
-					<SidebarLink to="/about" onClick={toggle}>
-						About
+					<SidebarLink to="/offers" onClick={toggle}>
+						Offers
 					</SidebarLink>
-					<SidebarLink to="/about" onClick={toggle}>
-						About
+					<SidebarLink to="/users" onClick={toggle}>
+						Users
 					</SidebarLink>
 				</SidebarMenu>
 				<SideBtnWrap>

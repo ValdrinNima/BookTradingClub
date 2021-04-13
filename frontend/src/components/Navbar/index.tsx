@@ -27,16 +27,16 @@ const Navbar: React.FC<Props> = ({ toggle }) => {
 					</MobileIcon>
 					<NavMenu>
 						<NavItem>
-							<NavLink to="about">Trading</NavLink>
+							<NavLink to="/books">Books</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink to="requests">Requests</NavLink>
+							<NavLink to="/requests">Requests</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink to="offers">Offers</NavLink>
+							<NavLink to="/trades">Trades</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink to="users">Users</NavLink>
+							<NavLink to="/users">Users</NavLink>
 						</NavItem>
 					</NavMenu>
 					<NavBtn>

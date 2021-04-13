@@ -1,18 +1,23 @@
 import React from "react";
-// import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
-// import Sidebar from "./components/Sidebar";
 import Home from "./pages";
+import RequestsPage from "./pages/requests";
 import SigninPage from "./pages/signin";
+import UsersPage from "./pages/users";
+import TradesPage from "./pages/trades";
 
 function App() {
 	return (
 		<Router>
 			<Switch>
 				<Route path="/" component={Home} exact />
-				<Route path="signin" component={SigninPage} exact />
+				<Route path="/books" component={Home} exact />
+				<Route path="/requests" component={RequestsPage} exact />
+				<Route path="/trades" component={TradesPage} exact />
+				<Route path="/users" component={UsersPage} exact />
+				<Route path="/sigin" component={SigninPage} exact />
 			</Switch>
 		</Router>
 	);
