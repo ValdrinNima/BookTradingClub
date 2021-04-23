@@ -40,7 +40,8 @@ const Navbar: React.FC<Props> = ({ toggle }) => {
 						</NavItem>
 					</NavMenu>
 					<NavBtn>
-						<NavBtnLink to="/signin">Sign in</NavBtnLink>
+						<NavBtnLink to="/login">Log in</NavBtnLink>
+						<NavBtnLink to="/register">Sign in</NavBtnLink>
 					</NavBtn>
 				</NavbarContainer>
 			</Nav>

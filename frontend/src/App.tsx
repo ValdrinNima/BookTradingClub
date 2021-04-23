@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./pages";
 import RequestsPage from "./pages/requests";
-import SigninPage from "./pages/signin";
+import RegisterPage from "./pages/regsiter";
 import UsersPage from "./pages/users";
 import TradesPage from "./pages/trades";
+import LoginPage from "./pages/login";
 
 function App() {
 	return (
@@ -17,7 +18,8 @@ function App() {
 				<Route path="/requests" component={RequestsPage} exact />
 				<Route path="/trades" component={TradesPage} exact />
 				<Route path="/users" component={UsersPage} exact />
-				<Route path="/sigin" component={SigninPage} exact />
+				<Route path="/register" component={RegisterPage} exact />
+				<Route path="/login" component={LoginPage} exact />
 			</Switch>
 		</Router>
 	);
