@@ -1,4 +1,3 @@
-const { restore } = require("../config/redis");
 
 const isAuth = (req, res, next) => {
 	if (req.isAuthenticated()) {

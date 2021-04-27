@@ -14,7 +14,7 @@ import {
 import { useForm } from "react-hook-form";
 
 interface FormData {
-	email: string;
+	username: string;
 	password: string;
 }
 
@@ -24,14 +24,16 @@ const Login = (props: Props) => {
 	const { register, handleSubmit } = useForm<FormData>();
 
 	const onSubmit = (data: FormData, e: any) => {
-		fetch("http://localhost:5000", {
+		fetch("http://localhost:5000/login", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
 			credentials: "include",
 			body: JSON.stringify(data),
-		});
+		})
+			.then((res) => res.json())
+			.then((data) => console.log(data));
 	};
 
 	return (
@@ -41,10 +43,10 @@ const Login = (props: Props) => {
 				<FormContent>
 					<Form onSubmit={handleSubmit(onSubmit)}>
 						<FormH1>Sign in to your account</FormH1>
-						<FormLabel htmlFor="for">Email</FormLabel>
+						<FormLabel htmlFor="for">Username</FormLabel>
 						<FormInput
-							type="email"
-							{...register("email", { required: true })}
+							type="text"
+							{...register("username", { required: true })}
 						/>
 						<FormLabel htmlFor="for">Password</FormLabel>
 						<FormInput

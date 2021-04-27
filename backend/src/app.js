@@ -10,9 +10,9 @@ const pool = require("./config/db");
 const app = express();
 
 // in production change cors to corsMiddleware
-// app.use(corsMiddleware);
-app.use(cors({ origin: "*" }));
-// app.options("*", corsMiddleware)
+app.options("*", corsMiddleware);
+app.use(corsMiddleware);
+// app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

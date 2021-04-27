@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Container,
 	FormWrap,
@@ -23,16 +23,19 @@ interface Props {}
 
 const Signin = (props: Props) => {
 	const { register, handleSubmit } = useForm<FormData>();
+	const [registerMsg, setRegisterMsg] = useState<string>();
 
 	const onSubmit = (data: FormData, e: any) => {
-		fetch("http://localhost:5000", {
+		fetch("http://localhost:5000/register", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
-			credentials: "include",
+			// credentials: "include",
 			body: JSON.stringify(data),
-		});
+		})
+			.then((res) => res.json())
+			.then((data) => setRegisterMsg(data.msg));
 	};
 
 	return (
@@ -56,6 +59,7 @@ const Signin = (props: Props) => {
 							type="password"
 							{...register("password", { required: true })}
 						/>
+						<h3 style={{ color: "white" }}>{registerMsg}</h3>
 						<FormButton type="submit">Continue </FormButton>
 						<Text>Forgot password</Text>
 					</Form>

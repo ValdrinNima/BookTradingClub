@@ -1,5 +1,6 @@
-select * from users
+select *
+from users 
 
 -- @block
-alter TABLE users 
-add column password VARCHAR(255) 
+DELETE FROM users
+where email = 'email@bla.de'

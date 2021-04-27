@@ -30,14 +30,13 @@ passport.use(
 );
 
 passport.serializeUser(function (user, done) {
-	console.log("serialize user is executing");
 	done(null, user.user_id);
 });
 
 passport.deserializeUser(function (id, done) {
 	pool.query(
-		"SELECT * FROM users WHERE id = $1",
-		[parseInt(id, 10)],
+		"SELECT * FROM users WHERE user_id = $1",
+		[id],
 		(err, results) => {
 			if (err) {
 				return done(err);
