@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Redirect, Route } from "react-router-dom";
+
 import {
 	Container,
 	FormWrap,
@@ -21,6 +23,10 @@ interface FormData {
 interface Props {}
 
 const Login = (props: Props) => {
+	const [loginStatus, setLoginStatus] = useState<{
+		msg: string;
+		loggedIn: boolean;
+	}>({ msg: "Not logged in", loggedIn: false });
 	const { register, handleSubmit } = useForm<FormData>();
 
 	const onSubmit = (data: FormData, e: any) => {
@@ -33,11 +39,16 @@ const Login = (props: Props) => {
 			body: JSON.stringify(data),
 		})
 			.then((res) => res.json())
-			.then((data) => console.log(data));
+			.then((data) => {
+				console.log(data);
+				setLoginStatus(data);
+			});
 	};
+
 
 	return (
 		<Container>
+			{loginStatus.loggedIn ? <Redirect to="/books"></Redirect> : null}
 			<FormWrap>
 				<Icon to="/"></Icon>
 				<FormContent>

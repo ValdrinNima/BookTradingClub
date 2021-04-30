@@ -7,7 +7,7 @@ import { BooksGrid } from "./BooksElements";
 interface Props {}
 
 const BooksSection: React.FC<Props> = () => {
-	const [books, setBooks] = useState<number[]>([1, 2, 3, 4, 5, 6]);
+	const [books, ] = useState<number[]>([1, 2, 3, 4, 5, 6]);
 
 	return (
 		<MainContainer>

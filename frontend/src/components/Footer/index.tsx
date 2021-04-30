@@ -6,7 +6,6 @@ import {
 	FooterLinkItems,
 	FooterLinksContainer,
 	FooterLinksWrapper,
-	FooterLinkTitle,
 	FooterWrap,
 	SocialIconLink,
 	SocialIcons,
@@ -56,21 +55,21 @@ const Footer: React.FC<Props> = () => {
 							<SocialIconLink
 								href="//"
 								target="_blank"
-								aria-lable="Facebook"
+								aria-label="Facebook"
 							>
 								<FaFacebook />
 							</SocialIconLink>
 							<SocialIconLink
 								href="//"
 								target="_blank"
-								aria-lable="Instagram"
+								aria-label="Instagram"
 							>
 								<FaInstagram />
 							</SocialIconLink>
 							<SocialIconLink
 								href="/"
 								target="_blank"
-								aria-lable="Youtube"
+								aria-label="Youtube"
 							>
 								<FaYoutube />
 							</SocialIconLink>
