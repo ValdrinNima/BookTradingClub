@@ -9,7 +9,6 @@ const pool = require("./config/db");
 
 const app = express();
 
-// in production change cors to corsMiddleware
 app.options("*", corsMiddleware);
 app.use(corsMiddleware);
 // app.use(cors({ origin: "*" }));
@@ -23,7 +22,7 @@ require("./config/passport");
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(router);
+app.use("/api/v1/", router);
 
 app.listen(process.env.PORT, () => {
 	console.log("listening on port " + process.env.PORT);
