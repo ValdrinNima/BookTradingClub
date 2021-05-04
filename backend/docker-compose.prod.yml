@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+    app:
+        build:
+            context: .
+            args:
+                NODE_ENV: production
+        command: ["./wait-for-it.sh", "postgres:5432", "--", "npm", "start"]
+        environment:
+            DB_HOST: ${DB_HOST}
+            DB_NAME: ${DB_NAME}
+            DB_PASSWORD: ${DB_PASSWORD}
+            DB_USER: ${DB_USER}
+            DB_PORT: ${DB_PORT}
+        # command: npm run start
+    postgres:
+        environment:
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}

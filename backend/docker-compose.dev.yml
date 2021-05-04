@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+    app:
+        build:
+            context: .
+            args:
+                NODE_ENV: development
+        environment:
+            - DB_HOST=postgres
+            - DB_NAME=booktrading
+            - DB_PASSWORD=postgres
+            - DB_USER=postgres
+            - DB_PORT=5432
+            - REDIS_HOST=redis
+            - REDIS_PORT=6379
+            - SESSION_SECRET=secret
+        volumes:
+            - ./:/usr/src/app
+            - /usr/src/app/node_modules
+        # command: npm run dev
+        command:
+            ["./wait-for-it.sh", "postgres:5432", "--", "npm", "run", "dev"]
+    postgres:
+        environment:
+            - POSTGRES_PASSWORD=postgres

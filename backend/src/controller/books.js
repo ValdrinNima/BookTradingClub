@@ -1,11 +1,9 @@
-const pool = require("../config/db");
+const { listBooks } = require("../services/books");
 
 const books = async (req, res) => {
 	try {
-		const query =
-			"SELECT book.book_id, title, author, isbn, comment FROM book LEFT JOIN offers ON book.book_id = offers.book_id";
-		const bla = await pool.query(query);
-		res.json(bla.rows);
+		const books = await listBooks();
+		res.json(books.rows);
 	} catch (err) {
 		console.error(err);
 	}

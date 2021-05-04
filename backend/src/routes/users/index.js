@@ -1,10 +1,7 @@
 const router = require("express").Router();
-const pool = require("../../config/db");
+const usersController = require("../../controller/users");
 
-router.get("/", async (req, res) => {
-	const users = await pool.query("SELECT * FROM users");
-	res.status(200).json({ data: users });
-	return;
-});
+router.get("/", usersController.users);
 
-module.exports = router
+
+module.exports = router;

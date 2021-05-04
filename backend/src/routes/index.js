@@ -11,4 +11,8 @@ router.use("/books", booksRouter);
 router.use("/login", loginRouter);
 router.use("/register", registerRouter);
 
+router.get("/test", (req, res) => {
+	res.json({ msg: "Es klappt" });
+});
+
 module.exports = router;

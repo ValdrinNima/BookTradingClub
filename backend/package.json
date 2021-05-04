@@ -4,7 +4,10 @@
 	"private": true,
 	"scripts": {
 		"start": "node ./src/app.js",
-		"dev": "nodemon ./src/app.js"
+		"dev": "nodemon -L ./src/app.js",
+		"up": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
+		"rebuild": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
+		"down": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down"
 	},
 	"dependencies": {
 		"bcrypt": "^5.0.1",
