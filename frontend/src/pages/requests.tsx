@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import RequestsSection from "../components/RequestsSection";
 
 interface Props {}
 
@@ -16,6 +17,7 @@ const RequestsPage: React.FC<Props> = () => {
 		<>
 			<Sidebar isOpen={isOpen} toggle={toggle} />
 			<Navbar toggle={toggle} />
+			<RequestsSection></RequestsSection>
 			<Footer />
 		</>
 	);

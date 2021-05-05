@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RequestContainer = styled.div`
+export const Container = styled.div`
 	padding: 1em;
 	margin: 0.5em 0 0.5em;
 	min-height: 100px; // TODO: remove this
@@ -8,28 +8,28 @@ export const RequestContainer = styled.div`
 	border-radius: 5px;
 `;
 
-export const RequestWrap = styled.div`
+export const Wrap = styled.div`
 	display: flex;
 `;
 
-export const RequestGiveContainer = styled.div`
+export const GiveContainer = styled.div`
 	padding: 1em;
 	width: 100%;
 	min-height: 100px;
 `;
 
-export const RequestTakeContainer = styled.div`
+export const TakeContainer = styled.div`
 	padding: 1em;
 	width: 100%;
 	min-height: 100px; // TODO: remove this
 `;
 
-export const RequestGiveWrap = styled.div`
+export const GiveWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 `;
 
-export const RequestTakeWrap = styled.div`
+export const TakeWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 `;
