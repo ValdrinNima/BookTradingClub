@@ -17,8 +17,8 @@ services:
             - POSTGRES_PASSWORD=postgres
             - POSTGRES_USER=postgres
             - POSTGRES_DB=booktrading
-        volumes:
+        # volumes:
             # - ./pgdata:/var/lib/postgresql/data
-            - ./src/migrations:/docker-entrypoint-initdb.d
+            # - ./src/migrations:/docker-entrypoint-initdb.d
     redis:
         image: redis:6

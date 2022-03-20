@@ -9,7 +9,7 @@ import {
 	BookItemDescription,
 	BookOverview,
 } from "./BookItemElements";
-import image from "../../../images/test.jpg";
+import image from "../../../images/logo192.png";
 
 interface Props {}
 

@@ -3,11 +3,16 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
+		"seed-make": "npx knex seed:make dev_seed --knexfile ./src/db/knexfile.js",
+		"seed": "npx knex seed:run --knexfile ./src/db/knexfile.js",
+		"migrate-down": "npx knex migrate:down --knexfile ./src/db/knexfile.js",
+		"migrate": "npx knex migrate:latest --knexfile ./src/db/knexfile.js",
 		"start": "node ./src/app.js",
 		"dev": "nodemon -L ./src/app.js",
+		"dev:migrate": "npx knex migrate:latest --knexfile ./db/knexfile.js && nodemon -L ./src/app.js",
 		"up": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
 		"rebuild": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
-		"down": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down"
+		"down": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v"
 	},
 	"dependencies": {
 		"bcrypt": "^5.0.1",
@@ -18,6 +23,8 @@
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
 		"express-session": "^1.17.1",
+		"knex": "^1.0.4",
+		"objection": "^3.0.1",
 		"passport": "^0.4.1",
 		"passport-local": "^1.0.0",
 		"pg": "^8.5.1",
